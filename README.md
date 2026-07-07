@@ -15,7 +15,7 @@ A full-stack, e-commerce web application designed for browsing, selecting, and o
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Backend:** PHP (Session tracking, request handling)
