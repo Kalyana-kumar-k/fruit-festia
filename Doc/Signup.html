@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SIGNUP</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('../Doc/frt.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #adff2f;
+        }
+
+        div {
+            background: transparent;
+            backdrop-filter: blur(50px);
+            height: 75vh;
+            width: 50%;
+            margin: 0 0 0 25%;
+            padding: 1px 0 0 0;
+        }
+
+        h2 {
+            font-size: 50px;
+            color: white;
+        }
+
+        h3 {
+            font-size: 30px;
+            color: #7fffd4;
+        }
+
+        label {
+            font-size: 20px;
+            font-weight: bold;
+            color: #f0fff0;
+        }
+
+        input {
+            width: 30%;
+            height: 25px;
+            text-align: center;
+            border: white;
+            border-radius: 20px;
+            font-size: 20px;
+            color: darkRed;
+        }
+
+        button {
+            color: white;
+            font-weight: bold;
+            height: 30px;
+            width: 80px;
+            background-color: green;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 1px 4px 8px #555;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkGreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>@Friut festia</h1>
+
+    <!.....CREATE ACCOUNT.....>
+        <div class="signup hidden">
+            <h2>Welcome to join us!</h2>
+            <form method="POST" action="AccountOpn.php">
+                <h3>Open your member log-in id in just 5minutes</h3>
+                <label>User name:</label>
+                <input type="text" class="name" maxlength="15" name="username" required><br><br>
+                <label>Password : </label>
+                <input type="password" class="pswrd" maxlength="4" name="password" required><br><br>
+                <label>contact no:</label>
+                <input type="tel" pattern="[0-9]{10}" class="contact" maxlength="13" name="phone" maxlength="10"
+                    minlength="10" required><br><br>
+                <label>Mail Id:</label>
+                <input type="email" class="mail" maxlength="40" name="email" required><br><br>
+                <button onclick="cretacnt()">SUBMIT</button>
+            </form>
+        </div>
+        <script>
+            function cretacnt() {
+                alert("Member Id Create Successfully");
+            }
+        </script>
+</body>
+
+</html>

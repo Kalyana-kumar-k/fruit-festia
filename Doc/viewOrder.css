@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui;
+    background-color: seashell;
+}
+
+header {
+    background-color: black;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: white;
+}
+
+header h1 {
+    color: white
+}
+
+header nav {
+    margin-top: 5px;
+
+}
+
+header nav ul li {
+    padding: 15px;
+    display: inline;    
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color:white ;
+    color: white;
+}
+
+header nav ul li a:active {
+    text-decoration: none;
+    color: white;
+}
+
+.cardContainer {
+    background: #000;
+    width: 230px;
+    height: 250px;
+    border-radius: 5px;
+    margin: 40px;
+    color: white;
+    padding: 10px;
+    overflow: auto;
+    float: left;
+    padding: 10px;
+}
+
+.detailsBtn {
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+}
+
+.detailsBtn a {
+    text-decoration: none;
+    color: black;
+}
+
+.logout {
+    background-color:black;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    position: relative;
+    left: 93%;
+}

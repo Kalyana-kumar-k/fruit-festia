@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>WELCOME</title>
+   <style>
+      body {
+         background-image: url("./Doc/frut.jpeg");
+         background-size: cover;
+      }
+
+      .demo {
+         width: 50%;
+         text-align: center;
+         color: #c9ff12;
+         background: transparent;
+         backdrop-filter: blur(10px);
+         margin: 10% auto;
+         padding: 20px;
+         font-family: arial;
+         transition: transform 1s;
+      }
+
+      .demo:hover {
+         transform: scale(1.3);
+      }
+
+      .button-class,
+      .show {
+         border-radius: 5px;
+         border: none;
+         background-color: #4caf50;
+         color: white;
+         padding: 10px 20px;
+         text-decoration: none;
+         display: block;
+         width: 28%;
+         font-size: 16px;
+         margin: 4px auto;
+         cursor: pointer;
+      }
+
+      .button-class:hover {
+         transition: transform 1s;
+         transform: scale(1.1);
+      }
+
+      .show:hover {
+         transition: transform 1s;
+         transform: scale(1.1);
+      }
+
+      input {
+         background-color: #778899;
+         color: white;
+         height: 30px;
+         width: 30%;
+         text-align: center;
+         border: none;
+         border-radius: 20px;
+         font-size: 20px;
+      }
+
+      .signin {
+         color: white;
+         font-weight: bold;
+         height: 30px;
+         width: 80px;
+         background-color: green;
+         border: 1px solid green;
+         border-radius: 20px;
+         box-shadow: 1px 4px 8px #555;
+         cursor: pointer;
+      }
+
+      .signin:hover {
+         color: #deb887;
+      }
+
+      .content {
+         text-align: center;
+         position: absolute;
+         top: 5%;
+         right: 37%;
+         height: 315px;
+         width: 280px;
+         background-color: #f8f8ff;
+         border: none;
+         border-radius: 10px;
+         margin: 130px 0 0 70%;
+         padding: 20px 20px 0 20px;
+         box-shadow: 2px 4px 8px #555;
+         color: #556b2f;
+         z-index: 10;
+         border-radius: 10px;
+      }
+
+      .overlay {
+         position: absolute;
+         left: 0%;
+         bottom: 0%;
+         width: 100%;
+         height: 125%;
+         background-color: rgba(0, 0, 0, 0.6);
+         backdrop-filter: blur(3px);
+         z-index: 5;
+      }
+
+      .close {
+         background-color: #f8f8ff;
+         position: absolute;
+         right: 10px;
+         top: 10px;
+         width: 50px;
+         font-size: 40px;
+         font-weight: bold;
+         border: none;
+         cursor: pointer;
+      }
+
+      label,
+      p {
+         font-size: 20px;
+         font-weight: bold;
+      }
+
+      h2 {
+         color: darkRed;
+      }
+
+      .hidden {
+         display: none;
+      }
+   </style>
+</head>
+
+<body>
+
+   <!.....MAIN DIV.....>
+      <div class="demo">
+         <h1>welcome! to FRUIT FESTIA<br>so glad to found us</h1>
+         <a href="Doc/prdt-login.html" class="button-class">Let see our products</a>
+         <button class="show">Log-in to purchase</button>
+      </div>
+
+      <!.....LOGIN DIV....>
+         <div class="content hidden">
+            <button class="close">&times;</button><br>
+            <h2>Log in to get started</h2><br>
+            <form method="POST" action="Doc/LoginCheck.php" class="formdiv">
+               <label>User name:</label>
+               <input type="text" class="name" maxlength="15" name="username" required><br><br>
+               <label>Password : </label>
+               <input type="password" class="pswrd" maxlength="4" name="password" required><br><br>
+               <button onclick="LS()" class="signin">SignIn&rarr;</button><br><br>
+               <p>Create an account <a href="Doc/Signup.html">click here</a>
+               <p><br>
+            </form>
+         </div>
+
+         <!......OVERLAY......>
+            <div class="overlay hidden"></div>
+
+            <!.....SCRIPT.....>
+               <script>
+                  const cont = document.querySelector(".content");
+                  const overlay = document.querySelector(".overlay");
+                  const btnopen = document.querySelector(".show");
+                  const btnclose = document.querySelector(".close");
+                  const open = function () {
+                     cont.classList.remove("hidden");
+                     overlay.classList.remove("hidden");
+                  };
+                  const close = function () {
+                     cont.classList.add("hidden");
+                     overlay.classList.add("hidden");
+                  };
+                  btnopen.addEventListener('click', open);
+                  btnclose.addEventListener('click', close);
+                  overlay.addEventListener('click', close);
+
+                  function LS() {
+                     alert("Your request is processing..\npress OK");
+                  }
+               </script>
+
+</body>
+
+</html>

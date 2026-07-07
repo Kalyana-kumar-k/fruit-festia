@@ -1,0 +1,189 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+<style>
+body{
+background-color:#00264d;
+font-variant:small-caps;
+color:#d1d1e0;
+}
+.products{
+border-radius:10px;
+background-color:#003366;
+width:92%;
+height:440px;
+margin:auto;
+}
+
+img{
+border-radius:10px;
+height:100px;
+width:200px;
+margin:20px 20px;
+float:left;
+}
+.show{
+border-radius:5px;
+border:none;
+background-color:#4caf50;
+color:white;
+padding:10px 10px;
+text-decoration:none;
+display:block;
+width:15%;
+font-size:20px;
+margin-top:10px;
+margin-left:80%;
+cursor:pointer;
+}
+.show:hover{
+transition: transform 1s;
+transform:rotatey(360deg);
+}
+input{
+background-color:#778899;
+color:white;
+height:30px;
+width:30%;
+text-align:center;
+border:none;
+border-radius:20px;
+font-size:20px;
+}
+.signin{
+color:white;
+font-weight:bold;
+height:30px;
+width:80px;
+background-color:green;
+border:1px solid green;
+border-radius:20px;
+box-shadow:1px 4px 8px #555;
+cursor:pointer;
+}
+.signin:hover{
+color:#deb887;
+}
+.content{
+text-align:center;
+position:absolute;
+top:5%;
+right:37%;
+height:315px;
+width:280px;
+background-color:#f8f8ff;
+border:none;
+border-radius:10px;
+margin:130px 0 0 70%;
+padding:20px 20px 0 20px;
+box-shadow:2px 4px 8px #555;
+color:darkGreen;
+z-index:10;
+border-radius:10px;
+}
+.overlay{
+position:absolute;
+left:0%;
+bottom:0%;
+width:100%;
+height:125%;
+background-color:rgba(0, 0, 0, 0.6);
+backdrop-filter: blur(3px);
+z-index:5;
+}
+ .close{
+    background-color:#f8f8ff;
+    position:absolute;
+    right:10px;
+    top:10px;
+    width:50px;
+    font-size:40px;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;	
+    }
+label, p{
+font-size:20px;
+font-weight:bold;
+}
+h2{
+color:darkRed;
+}
+.hidden{
+display:none;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+
+
+</style>
+<head>
+<body>
+<!....PRODUCTS IMG DIV...>
+<h1>Available products here:</h1>
+<div class="products">
+<img src="apple.jpeg">
+<img src="banana.jpeg">
+<img src="watermelon.jpeg">
+<img src="grapes.jpeg">
+<img src="mango.jpeg">
+<img src="pine.jpeg">
+<img src="guava.jpeg">
+<img src="jack.jpeg">
+<img src="sappota.jpeg">
+<img src="muskmelon.jpeg">
+<img src="pomegranate.jpeg">
+<img src="papaya.jpeg">
+</div>
+<button class="show">login-to-purchase..</button>
+<button class="show"><a href="./contact.php">contact</a></button>
+
+<!.....LOGIN DIV....>
+<div class="content hidden">
+<button class="close">&times;</button><br>
+<h2>Log in to get started</h2><br>
+<form method="POST" action="logincheck.php">
+<label >User name:</label>
+<input type = "text" class = "name" maxlength= "15" name="username" required><br><br>
+<label>Password   :  </label>
+<input type = "password" class = "pswrd" maxlength= "4" name="password" required><br><br>
+<button class="signin" onclick="LS()">SignIn&rarr;</button><br><br>
+<p>Create an account <a href="Signup.html">click here</a><p><br>
+</form>
+</div>
+
+<!......OVERLAY......>
+<div class="overlay hidden"></div>
+
+<!.....SCRIPT.....>
+<script>
+
+const cont=document.querySelector(".content");
+const overlay=document.querySelector(".overlay");
+const btnopen=document.querySelector(".show");
+const btnclose=document.querySelector(".close");
+const open= function(){
+cont.classList.remove("hidden");
+overlay.classList.remove("hidden");
+};
+const close=function(){
+cont.classList.add("hidden");
+overlay.classList.add("hidden");
+};
+ btnopen.addEventListener('click', open);
+ btnclose.addEventListener('click', close);
+ overlay.addEventListener('click', close);
+
+function LS(){
+alert("process... Login");
+}
+
+</script>
+
+</body>
+</html>

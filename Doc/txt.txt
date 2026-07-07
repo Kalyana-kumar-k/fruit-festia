@@ -1,0 +1,113 @@
+<div class="modal fade" id="viewDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Order info</h5>
+                <h4 class="modal-title" id="exampleModalLabel">Id:</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+                <div class="modal-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Product</td>
+                                <td>Qty/kg</td>
+                                <td>Price/kg in Rs</td>
+                                <td>Price in Rs</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if (count($getOrder) > 0) {
+                                foreach ($getOrder as $order) { ?>
+                                    <tr>
+                                        <td>Apple</td>
+                                        <td><?= htmlspecialchars($order["apple_kg"]); ?></td>
+                                        <td>150</td>
+                                        <td><?= htmlspecialchars($order["apple_kg"] * 150); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Banana</td>
+                                        <td><?= htmlspecialchars($order["banana_kg"]); ?></td>
+                                        <td>50</td>
+                                        <td><?= htmlspecialchars($order["banana_kg"] * 50); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Watermelon</td>
+                                        <td><?= htmlspecialchars($order["watermenon_kg"]); ?></td>
+                                        <td>20</td>
+                                        <td><?= htmlspecialchars($order["watermenon_kg"] * 20); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grapes</td>
+                                        <td><?= htmlspecialchars($order["grapes_kg"]); ?></td>
+                                        <td>80</td>
+                                        <td><?= htmlspecialchars($order["grapes_kg"] * 80); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mangoes</td>
+                                        <td><?= htmlspecialchars($order["mango_kg"]); ?></td>
+                                        <td>120</td>
+                                        <td><?= htmlspecialchars($order["mango_kg"] * 120); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pineapple</td>
+                                        <td><?= htmlspecialchars($order["pineapple_kg"]); ?></td>
+                                        <td>50</td>
+                                        <td><?= htmlspecialchars($order["pineapple_kg"] * 50); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Guava</td>
+                                        <td><?= htmlspecialchars($order["guava_kg"]); ?></td>
+                                        <td>50</td>
+                                        <td><?= htmlspecialchars($order["guava_kg"] * 50); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jackfruit</td>
+                                        <td><?= htmlspecialchars($order["jackfruit_kg"]); ?></td>
+                                        <td>40</td>
+                                        <td><?= htmlspecialchars($order["jackfruit_kg"] * 40); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sappota</td>
+                                        <td><?= htmlspecialchars($order["sappota_kg"]); ?></td>
+                                        <td>45</td>
+                                        <td><?= htmlspecialchars($order["sappota_kg"] * 45); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Muskmelon</td>
+                                        <td><?= htmlspecialchars($order["muskmelon_kg"]); ?></td>
+                                        <td>45</td>
+                                        <td><?= htmlspecialchars($order["muskmelon_kg"] * 45); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pomegranate</td>
+                                        <td><?= htmlspecialchars($order["pomegranate_kg"]); ?></td>
+                                        <td>250</td>
+                                        <td><?= htmlspecialchars($order["pomegranate_kg"] * 250); ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Papaya</td>
+                                        <td><?= htmlspecialchars($order["papaya_kg"]); ?></td>
+                                        <td>40</td>
+                                        <td><?= htmlspecialchars($order["papaya_kg"] * 40); ?></td>
+                                    </tr>
+                                    <th>
+                                        <tr>
+                                            <td colspan="2">Total: Rs. </td>
+                                            <td colspan="2"><?= "<b>" . htmlspecialchars($order["total_amount"]) . "<b>"; ?></td>
+                                        </tr>
+                                    </th>
+                            <?php }
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
