@@ -2,8 +2,6 @@
 
 A full-stack, e-commerce web application designed for browsing, selecting, and ordering fresh fruits. This project features user authentication, a structured relational database layout, and dynamic data handling.
 
-🌐 **[Live Demo Link](https://fruitfestia.infinityfreeapp.com)**
-
 ---
 
 ## Features
