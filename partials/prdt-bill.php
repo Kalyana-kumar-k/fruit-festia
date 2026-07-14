@@ -84,18 +84,18 @@ $_SESSION['username'];
             <h2>Our products here:</h2>
 
             <div class="products">
-                <img src="apple.jpeg">
-                <img src="banana.jpeg">
-                <img src="watermelon.jpeg">
-                <img src="grapes.jpeg">
-                <img src="mango.jpeg">
-                <img src="pine.jpeg">
-                <img src="guava.jpeg">
-                <img src="jack.jpeg">
-                <img src="sappota.jpeg">
-                <img src="muskmelon.jpeg">
-                <img src="pomegranate.jpeg">
-                <img src="papaya.jpeg">
+                <img src="./images/apple.jpeg">
+                <img src="./images/banana.jpeg">
+                <img src="./images/watermelon.jpeg">
+                <img src="./images/grapes.jpeg">
+                <img src="./images/mango.jpeg">
+                <img src="./images/pine.jpeg">
+                <img src="./images/guava.jpeg">
+                <img src="./images/jack.jpeg">
+                <img src="./images/sappota.jpeg">
+                <img src="./images/muskmelon.jpeg">
+                <img src="./images/pomegranate.jpeg">
+                <img src="./images/papaya.jpeg">
             </div>
             <form action="logout.php" method="POST">
                 <button class="logout" style="margin-top:10px;" type="submit" name="Logout" value="log-out">Log-out</button>

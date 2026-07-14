@@ -114,8 +114,8 @@ $_SESSION['username'];
     <div class="btns">
         <div>
             <button><a href="prdt-bill.php">See products</a></button>
-            <button><a href="./viewOrder.php">Order List</a></button>
-            <button><a href="./contact.php">Contact</a></button>
+            <button><a href="viewOrder.php">Order List</a></button>
+            <button><a href="contact.php">Contact</a></button>
         </div>
         <form action="logout.php" method="POST">
             <button style="margin-top:10px;" type="submit" name="Logout" value="log-out">Log-out</button>

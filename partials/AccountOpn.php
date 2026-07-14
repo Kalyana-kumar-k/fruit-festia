@@ -33,7 +33,7 @@ mysqli_stmt_bind_param($stmt,"ssss",$username,$password,$phone,$email);
 $result = mysqli_stmt_execute($stmt);
 
 if ($result){
-    header("Location:fruitfestia/index.html");
+    header("Location:index.html");
     exit();
 }
 else{
