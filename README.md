@@ -25,15 +25,3 @@ A full-stack, e-commerce web application designed for browsing, selecting, and o
 - **Hosting/Environment:** XAMPP (Local development), InfinityFree (Production hosting via Apache)
 
 ---
-
-## Project Structure
-
-Fruitfestia/
-│
-├── index.html # Application entry point / Welcome dashboard
-└── Docs/ # Application engine files
-├── LoginCheck.php # Session validation logic
-├── AccountOpn.php # Account generation routine
-├── prdt-bill.php # Billing processing interface
-├── Signup.html # Customer onboarding layout
-└── [Images/Assets] # Graphical storefront content
